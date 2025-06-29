@@ -59,6 +59,9 @@ class Player:
         self.player_x = self.player_x + self.player_x_change
         self.player_y = self.player_y + self.player_y_change
 
+        if self.bullet_ready == True:
+            self.bullet_ready = False
+
         if not self.bullet_ready:
             self.bullet_x = self.player_x
             screen.blit(self.bullet_img, (self.bullet_x, self.bullet_y))
